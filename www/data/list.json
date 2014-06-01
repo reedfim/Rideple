@@ -1,0 +1,40 @@
+{
+    "actType" : "cycle",
+    "list" : [
+        {
+            "contentType" : "CG"
+        },
+        {
+            "contentType" : "BR1",
+            "routeMapImg" : "images/mapline.png",
+            "actType" : "cycle",
+            "user1" : {
+
+            },
+            "user2" : {
+
+            }
+        },
+        {
+            "contentType" : "BR2"
+        },
+        {
+            "contentType" : "BB"
+        },
+        {
+            "contentType" : "GB"
+        },
+        {
+            "contentType" : "GF"
+        },
+        {
+            "contentType" : "DF"
+        },
+        {
+            "contentType" : "PF"
+        },
+        {
+            "contentType" : "PFP"
+        }
+    ]
+}

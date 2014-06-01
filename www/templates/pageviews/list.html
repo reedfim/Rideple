@@ -1,0 +1,385 @@
+<ion-view title="{{actType}}">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-navicon" ng-click="showPopup()"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header List">
+        <list-content-item ng-repeat="content in contents" content="content"></list-content-item>
+    </ion-content>
+</ion-view>
+
+
+<!-- 배틀 결과 #1-->
+<script type="text/ng-template" id="battleResult1.html" data-type="BR1">
+    <div class="List">
+        <div class="list-item">
+            <div class="back-panel" data-has-message="false">
+                <div class="info-wrap">
+                    <div class="battle-finish-wrap">
+                        <div class="wrap-bgr">
+                            <img class="img-bgr" src="images/mapline.png" alt="백그라운드 이미지"/>
+                            <div class="wrap-dimmed"></div>
+                        </div>
+                        <div class="wrap-info">
+                            <div class="img-comm type-ride" data-type="cycle"></div>
+                            <div class="battle-panel">
+                                <div class="user-back user win"> <!--백그라운드 이모티콘-->
+                                    <span class="img-comm img-win"></span>
+                                    <img class="user-profile-photo" src="images/user1.png" alt="user picture"/>
+                                </div>
+                                <div class="versus">
+                                    <span class="txt-ico-versus">VS</span>
+                                    <span class="txt-versus">12km</span>
+                                </div>
+                                <div class="user-back user lose"> <!--백그라운드 이모티콘-->
+                                    <span class="img-comm img-win"></span>
+                                    <img class="user-profile-photo" src="images/user2.png" alt="user picture"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-bar"></div>
+                    <div class="info-bar-item">
+                        <div class="bar-item heart-wrap">
+                            <span class="img-comm img-heart"></span>
+                            <span class="cnt-heart">56</span>
+                        </div>
+                        <div class="bar-item reply-wrap">
+                            <span class="img-comm img-reply"></span>
+                            <span class="cnt-reply">12</span>
+                        </div>
+                        <div class="bar-item time-wrap">
+                            <span class="txt-time">an hour ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 배틀 결과 #2 -->
+<script type="text/ng-template" id="battleResult2.html" data-type="BR2">
+    <div class="List">
+        <div class="list-item">
+            <div class="back-panel" data-has-message="false">
+                <div class="info-wrap">
+                    <div class="battle-finish-wrap">
+                        <div class="wrap-bgr">
+                            <img class="img-bgr" src="images/mapline.png" alt="백그라운드 이미지"/>
+                            <div class="wrap-dimmed"></div>
+                        </div>
+                        <div class="wrap-info">
+                            <div class="img-comm type-ride" data-type="mtb"></div>
+                            <div class="battle-panel">
+                                <div class="user-back user lose"> <!--백그라운드 이모티콘-->
+                                    <span class="img-comm img-win"></span>
+                                    <img class="user-profile-photo" src="images/user1.png" alt="user picture"/>
+                                </div>
+                                <div class="versus">
+                                    <span class="txt-ico-versus">VS</span>
+                                    <span class="txt-versus">12km</span>
+                                </div>
+                                <div class="user-back user win"> <!--백그라운드 이모티콘-->
+                                    <span class="img-comm img-win"></span>
+                                    <img class="user-profile-photo" src="images/user2.png" alt="user picture"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-bar"></div>
+                    <div class="info-bar-item">
+                        <div class="bar-item heart-wrap">
+                            <span class="img-comm img-heart"></span>
+                            <span class="cnt-heart">56</span>
+                        </div>
+                        <div class="bar-item reply-wrap">
+                            <span class="img-comm img-reply"></span>
+                            <span class="cnt-reply">12</span>
+                        </div>
+                        <div class="bar-item time-wrap">
+                            <span class="txt-time">an hour ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 배틀 시작 -->
+<script type="text/ng-template" id="battleBegin.html" data-type="BB">
+    <div class="List">
+        <div class="list-item">
+            <div class="back-panel" data-has-message="false">
+                <div class="info-wrap">
+                    <div class="battle-begin-wrap">
+                        <div class="wrap-bgr">
+                            <img class="img-bgr" src="images/mapline.png" alt="백그라운드 이미지"/>
+                            <div class="wrap-dimmed"></div>
+                        </div>
+                        <div class="wrap-info">
+                            <div class="img-comm type-ride" data-type="tb"></div>
+                            <div class="txt-date">Feb 28</div>
+                            <div class="txt-guide">Upcomming</div>
+                            <div class="battle-panel">
+                                <div class="user"> <!--백그라운드 이모티콘-->
+                                    <img class="user-profile-photo" src="images/user1.png" alt="user picture"/>
+                                </div>
+                                <div class="versus">
+                                    <span class="txt-ico-versus">VS</span>
+                                    <span class="txt-versus">12km</span>
+                                </div>
+                                <div class="user"> <!--백그라운드 이모티콘-->
+                                    <img class="user-profile-photo" src="images/user2.png" alt="user picture"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 모임 참가 시작 -->
+<script type="text/ng-template" id="groupBegin.html" data-type="GB">
+    <div class="List">
+        <div class="list-item">
+            <div class="back-panel" data-has-message="false">
+                <div class="info-wrap">
+                    <div class="gaoup-begin-wrap">
+                        <div class="wrap-bgr">
+                            <img class="img-bgr" src="images/mapline.png" alt="백그라운드 이미지"/>
+                            <div class="wrap-dimmed"></div>
+                        </div>
+                        <div class="wrap-info">
+                            <div class="img-comm type-ride" data-type="walk"></div>
+                            <div class="txt-date">Feb 28 9:00</div>
+                            <div class="txt-guide">Upcomming</div>
+                            <div class="group-panel">
+                                <div class="txt-title">Central Park Riding</div>
+                                <div class="info-ride">
+                                    <span class="txt-dist">45<span class="txt-unit">km</span></span>
+                                    <span class="ico-slash">&nbsp;/&nbsp;</span>
+                                    <span class="txt-time">02:45:32</span>
+                                    <span class="img-comm img-trophy"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 모임 참가 결과(레이스) -->
+<script type="text/ng-template" id="groupFinish.html" data-type="GF">
+    <div class="List">
+        <div class="list-item">
+            <div class="back-panel" data-has-message="false">
+                <div class="info-wrap">
+                    <div class="group-finish-wrap">
+                        <div class="wrap-bgr">
+                            <img class="img-bgr" src="images/mapline.png" alt="백그라운드 이미지"/>
+                            <div class="wrap-dimmed"></div>
+                        </div>
+                        <div class="wrap-info">
+                            <div class="img-comm type-ride" data-type="run"></div>
+                            <div class="txt-date">Feb 28 9:00</div>
+                            <div class="txt-guide">Rank</div>
+                            <div class="group-panel">
+                                <div class="txt-title">Central Park Riding</div>
+                                <ul class="result-ride">
+                                    <li class="user rank1"> <!--백그라운드 이모티콘-->
+                                        <img class="user-profile-photo" src="images/user1.png" alt="user picture"/>
+                                    </li>
+                                    <li class="user rank2"> <!--백그라운드 이모티콘-->
+                                        <img class="user-profile-photo" src="images/user2.png" alt="user picture"/>
+                                    </li>
+                                    <li class="user rank3"> <!--백그라운드 이모티콘-->
+                                        <img class="user-profile-photo" src="images/user3.png" alt="user picture"/>
+                                    </li>
+                                    <li class="user rank4"> <!--백그라운드 이모티콘-->
+                                        <img class="user-profile-photo" src="images/user4.png" alt="user picture"/>
+                                    </li>
+                                    <li class="user rank5"> <!--백그라운드 이모티콘-->
+                                        <img class="user-profile-photo" src="images/user5.png" alt="user picture"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 모임 생성 ui-sref="createGroup"-->
+<script type="text/ng-template" id="createGroup.html" data-type="CG">
+    <div class="List">
+        <div class="list-item">
+            <div class="back-panel" data-has-message="false">
+                <div class="info-wrap">
+                    <div class="create-group-wrap">
+                        <div class="wrap-bgr">
+                            <img class="img-bgr" src="images/mapline.png" alt="백그라운드 이미지"/>
+                            <div class="wrap-dimmed"></div>
+                        </div>
+                        <div class="wrap-info">
+                            <div class="txt-title">Create meeting</div>
+                            <div class="txt-desc">
+                                <p>Route, distance, elapsed hours of the dates you</p> <!--DB에는 이 태그 전체로 집어 넣자.-->
+                                <p>want to share and invite your friends and</p>
+                                <p>the people around Run out together.</p>
+                            </div>
+                            <button class="btn-create" ng-click="content.clickCreateGroup()">Create</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 일반 피드 등록 with message, message가 없을 경우에는 숨긴다.-->
+<script type="text/ng-template" id="defaultFeed.html" data-type="DF">
+    <div class="List">
+        <div class="list-item">
+            <div class="back-panel" data-has-message="false">
+                <div class="info-wrap">
+                    <div class="default-feed-wrap">
+                        <div class="wrap-bgr">
+                            <img class="img-bgr" src="images/mapline.png" alt="백그라운드 이미지"/>
+                            <div class="wrap-dimmed"></div>
+                        </div>
+                        <div class="wrap-info">
+                            <div class="img-comm type-ride" data-type="hike"></div>
+                            <img class="user-profile-photo" src="images/user5.png" alt="user picture"/>
+                            <div class="feed-panel">
+                                <span class="img-comm img-dist"></span>
+                                <span class="txt-dist">25<span class="txt-unit">km</span></span>
+                                <span class="img-comm img-time"></span>
+                                <span class="txt-time">01:12:32</span>
+                                <span class="img-comm img-kcal"></span>
+                                <span class="txt-kcal">864<span class="txt-unit">kcal</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-bar"></div>
+                    <div class="info-bar-item">
+                        <div class="bar-item heart-wrap">
+                            <span class="img-comm img-heart"></span>
+                            <span class="cnt-heart">56</span>
+                        </div>
+                        <div class="bar-item reply-wrap">
+                            <span class="img-comm img-reply"></span>
+                            <span class="cnt-reply">12</span>
+                        </div>
+                        <div class="bar-item time-wrap">
+                            <span class="txt-time">an hour ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-panel">
+                    <span class="txt-message">
+                        River Road. Old Haunt. So Crazy..
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 사진 피드 등록 with message-->
+<script type="text/ng-template" id="photoFeed.html" data-type="PF">
+    <div class="List">
+        <div class="list-item">
+            <div class="back-panel" data-has-message="true">
+                <div class="info-wrap">
+                    <div class="photo-feed-wrap">
+                        <div class="wrap-bgr">
+                            <img class="img-bgr" src="images/take_image2.png" alt="백그라운드 이미지"/>
+                            <div class="wrap-gradient"></div>
+                        </div>
+                        <div class="wrap-info">
+                            <div class="img-comm type-ride" data-type="mtb"></div>
+                            <img class="user-profile-photo" src="images/user2.png" alt="user picture"/>
+                            <div class="feed-panel">
+                                <span class="img-comm img-dist"></span>
+                                <span class="txt-dist">25<span class="txt-unit">km</span></span>
+                                <span class="img-comm img-time"></span>
+                                <span class="txt-time">01:12:32</span>
+                                <span class="img-comm img-kcal"></span>
+                                <span class="txt-kcal">864<span class="txt-unit">kcal</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-bar"></div>
+                    <div class="info-bar-item">
+                        <div class="bar-item heart-wrap">
+                            <span class="img-comm img-heart"></span>
+                            <span class="cnt-heart">56</span>
+                        </div>
+                        <div class="bar-item reply-wrap">
+                            <span class="img-comm img-reply"></span>
+                            <span class="cnt-reply">12</span>
+                        </div>
+                        <div class="bar-item time-wrap">
+                            <span class="txt-time">an hour ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-panel">
+            <span class="txt-message">
+                River Road. Old Haunt. So Crazy..
+            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 사진 피드 등록 progress 레코딩 중에 사진을 올렸을 경우. -->
+<script type="text/ng-template" id="photoFeedProgress.html" data-type="PFP">
+    <div class="List">
+        <div class="list-item">
+            <div class="back-panel" data-has-message="false">
+                <div class="info-wrap">
+                    <div class="photo-feed-progress-wrap">
+                        <div class="wrap-bgr">
+                            <img class="img-bgr" src="images/take_image.png" alt="백그라운드 이미지"/>
+                            <div class="wrap-gradient"></div>
+                        </div>
+                        <div class="wrap-info">
+                            <div class="img-comm type-ride" data-type="cycle"></div>
+                            <img class="user-profile-photo" src="images/user4.png" alt="user picture"/>
+                            <div class="feed-panel">
+                                <span class="txt-event">i want to have this bike</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-bar"></div>
+                    <div class="info-bar-item">
+                        <div class="bar-item heart-wrap">
+                            <span class="img-comm img-heart"></span>
+                            <span class="cnt-heart">56</span>
+                        </div>
+                        <div class="bar-item reply-wrap">
+                            <span class="img-comm img-reply"></span>
+                            <span class="cnt-reply">12</span>
+                        </div>
+                        <div class="bar-item time-wrap">
+                            <span class="txt-time">an hour ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
