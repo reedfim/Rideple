@@ -3,8 +3,8 @@
  * */
 
 App.controllers
-    .controller('ActTypeSelectCtrl', ['$scope',
+    .controller('FriendsCtrl', ['$scope',
         function ($scope) {
-            $scope.title = 'Meet!';
+
         }
     ]);

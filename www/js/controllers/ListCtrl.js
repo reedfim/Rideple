@@ -3,47 +3,43 @@
  * */
 
 App.controllers
-    .controller('ListCtrl', ['$scope','$stateParams','global','$templateCache','TMPL_MAP','listModel','$ionicModal','$ionicPopup',
-        function ($scope, $stateParams, global, $templateCache, TMPL_MAP, listModel, $ionicModal, $ionicPopup) {
+    .controller('ListCtrl', ['$scope','$stateParams','global','$templateCache','Model_list','$ionicModal','$ionicPopup','$ionicSlideBoxDelegate',
+        function ($scope, $stateParams, global, $templateCache, Model_list, $ionicModal, $ionicPopup,$ionicSlideBoxDelegate) {
             console.log('ListCtrl');
-            global.makeTemplateCache($templateCache, TMPL_MAP.LIST); //리스트에서 사용할 템플릿들을 캐싱한다.
-
-            var actType = $stateParams.actType;
-            if(actType){
-                $scope.actType = actType + '▼';
+            var rideType = $stateParams.rideType;
+            if(rideType){
+                $scope.rideType = rideType;
             }else{
-                $scope.actType = global.getDefaultActType() + '▼';
+                $scope.rideType = global.getDefaultActType();
             }
 
             $scope.listData = null;
 
-            listModel.fetch(function(data){
+            Model_list.fetch(function(data){
                 $scope.listData = data;
-                for(var i=0;i<$scope.listData.list.length; i++){
-                    if($scope.listData.list[i].contentType === 'CG'){
-                        $scope.listData.list[i].clickCreateGroup = function(){
-                            console.log(3333);
+                for(var i=0;i<$scope.listData.plans.length; i++){
+                    if($scope.listData.plans[i].contentType === 'CG'){
+                        $scope.listData.plans[i].clickCreateGroup = function(){
                             $scope.modalCreateGroup.show();
                         }
                     }
                 }
-                $scope.contents = $scope.listData.list;
+                $scope.plans = $scope.listData.plans;
+                $scope.battleResults = $scope.listData.battleResults;
+                $scope.feeds = $scope.listData.feeds;
 
             });
+            setTimeout(function(){
+                $ionicSlideBoxDelegate.update();
+            },300);
+
+            $scope.listRefresh = function(){
+                setTimeout(function(){
+                    $scope.$broadcast('scroll.refreshComplete');
+                },2000);
+            }
 
 
-            $ionicModal.fromTemplateUrl('templates/modals/actTypeList.html', {
-                scope: $scope,
-                animation: 'slide-in-up'
-            }).then(function(modal) {
-                $scope.modalCreateGroup = modal;
-            });
-//            $scope.clickCreateGroup = function(){
-//                console.log('click');
-//                $scope.modalCreateGroup.show();
-//            }
-
-            // An elaborate, custom popup
             var popupConfig = {
                 template: '', //templateCache사용
                 title: 'Test',
@@ -57,7 +53,7 @@ App.controllers
                         onTap: function(e) {
                             console.log('click')
                         }
-                    },
+                    }
                 ]
             };
             var testPopup = null

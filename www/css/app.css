@@ -23,6 +23,9 @@ address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 .Header .header-custom {margin-bottom:0;border-bottom:1px solid #ccc;background-color:#fff;z-index:1000}
 .Header .header-title {text-align:center;font-size:16px;font-weight:bold;height:100%;line-height:50px}
 
+h1 {color:#1c8f96 !important}
+button.btn-rideple {color:#1c8f96 !important}
+
 /* Menu Indicator */
 .Menu-Indicator {}
 .Menu-Indicator .menu-btn {position:fixed;top:5px;left:5px;width:70px;height:40px;z-index:1001}
@@ -212,3 +215,7 @@ address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 .List .photo-feed-progress-wrap .wrap-info .feed-panel {position:absolute;bottom:31px;width:100%;text-align:right;padding:0 10px 0 35px}
 .List .photo-feed-progress-wrap .wrap-info .feed-panel .txt-event {font-size:13px;color:#ccc;font-weight:normal}
 
+
+
+.slider {height:100%;width:100%;}
+.slider-pager {bottom:5px}

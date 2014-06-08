@@ -4,7 +4,7 @@
 App.common
 
     .factory('global', function(){
-        var defaultActType = 'cycling';
+        var defaultActType = 'Cycle';
 
         return {
             getDefaultActType : function(){
@@ -27,8 +27,8 @@ App.common
         };
     }])
     .constant('URLS', {
-        list : 'data/list.json'
-
+        list : 'data/list.json',
+        groupList : 'data/groupList.json'
     })
     .constant('FLAG', {
 

@@ -6,7 +6,7 @@ App.common = angular.module('App.common', []);
 
 
 App
-    .run(function ($ionicPlatform) {
+    .run(function ($ionicPlatform, $templateCache, TMPL_MAP, global) {
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
@@ -18,6 +18,8 @@ App
                 StatusBar.styleDefault();
             }
         });
+
+        global.makeTemplateCache($templateCache, TMPL_MAP.LIST); //리스트에서 사용할 템플릿들을 캐싱한다.
     })
 
     .config(function ($stateProvider, $urlRouterProvider) {
@@ -39,11 +41,11 @@ App
                 }
             })
             .state('app.meetList', {
-                url: '/meetList',
+                url: '/groupList',
                 views: {
                     'contents': {
-                        templateUrl: 'templates/pageviews/meetList.html',
-                        controller : 'MeetListCtrl'
+                        templateUrl: 'templates/pageviews/groupList.html',
+                        controller : 'GroupListCtrl'
                     }
                 }
             })

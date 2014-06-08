@@ -1,6 +1,9 @@
-<ion-view title="cycle">
+<ion-view title="{{actType}}">
     <ion-nav-buttons side="left">
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-navicon"></button>
     </ion-nav-buttons>
     <ion-content class="has-header List">
         <!--<ion-list>-->
@@ -8,8 +11,15 @@
                 <!--{{playlist.title}}-->
             <!--</ion-item>-->
         <!--</ion-list>-->
-        <!-- 배틀 결과 #1-->
 
+        <div ng-repeat="number in {'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1,'name':1}">{{number.name}}</div>
+    </ion-content>
+</ion-view>
+
+
+<!-- 배틀 결과 #1-->
+<script type="text/ng-template" id="battleResult1.html" data-type="BR1">
+    <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
                 <div class="info-wrap">
@@ -53,7 +63,12 @@
                 </div>
             </div>
         </div>
-        <!-- 배틀 결과 #2 -->
+    </div>
+</script>
+
+<!-- 배틀 결과 #2 -->
+<script type="text/ng-template" id="battleResult2.html" data-type="BR2">
+    <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
                 <div class="info-wrap">
@@ -97,7 +112,12 @@
                 </div>
             </div>
         </div>
-        <!-- 배틀 시작 -->
+    </div>
+</script>
+
+<!-- 배틀 시작 -->
+<script type="text/ng-template" id="battleBegin.html" data-type="BB">
+    <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
                 <div class="info-wrap">
@@ -127,7 +147,12 @@
                 </div>
             </div>
         </div>
-        <!-- 모임 참가 시작 -->
+    </div>
+</script>
+
+<!-- 모임 참가 시작 -->
+<script type="text/ng-template" id="groupBegin.html" data-type="GB">
+    <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
                 <div class="info-wrap">
@@ -154,7 +179,12 @@
                 </div>
             </div>
         </div>
-        <!-- 모임 참가 결과(레이스) -->
+    </div>
+</script>
+
+<!-- 모임 참가 결과(레이스) -->
+<script type="text/ng-template" id="groupFinish.html" data-type="GF">
+    <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
                 <div class="info-wrap">
@@ -192,7 +222,12 @@
                 </div>
             </div>
         </div>
-        <!-- 모임 생성 -->
+    </div>
+</script>
+
+<!-- 모임 생성 -->
+<script type="text/ng-template" id="createGroup.html" data-type="CG">
+    <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
                 <div class="info-wrap">
@@ -214,8 +249,12 @@
                 </div>
             </div>
         </div>
+    </div>
+</script>
 
-        <!-- 일반 피드 등록 -->
+<!-- 일반 피드 등록 with message, message가 없을 경우에는 숨긴다.-->
+<script type="text/ng-template" id="defaultFeed.html" data-type="DF">
+    <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
                 <div class="info-wrap">
@@ -252,55 +291,19 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- 일반 피드 등록 with message-->
-        <div class="list-item">
-            <div class="back-panel" data-has-message="true">
-                <div class="info-wrap">
-                    <div class="default-feed-wrap">
-                        <div class="wrap-bgr">
-                            <img class="img-bgr" src="images/mapline.png" alt="백그라운드 이미지"/>
-                            <div class="wrap-dimmed"></div>
-                        </div>
-                        <div class="wrap-info">
-                            <div class="img-comm type-ride" data-type="cycle"></div>
-                            <img class="user-profile-photo" src="images/user1.png" alt="user picture"/>
-                            <div class="feed-panel">
-                                <span class="img-comm img-dist"></span>
-                                <span class="txt-dist">25<span class="txt-unit">km</span></span>
-                                <span class="img-comm img-time"></span>
-                                <span class="txt-time">01:12:32</span>
-                                <span class="img-comm img-kcal"></span>
-                                <span class="txt-kcal">864<span class="txt-unit">kcal</span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-bar"></div>
-                    <div class="info-bar-item">
-                        <div class="bar-item heart-wrap">
-                            <span class="img-comm img-heart"></span>
-                            <span class="cnt-heart">56</span>
-                        </div>
-                        <div class="bar-item reply-wrap">
-                            <span class="img-comm img-reply"></span>
-                            <span class="cnt-reply">12</span>
-                        </div>
-                        <div class="bar-item time-wrap">
-                            <span class="txt-time">an hour ago</span>
-                        </div>
-                    </div>
-                </div>
                 <div class="message-panel">
-            <span class="txt-message">
-                River Road. Old Haunt. So Crazy..
-            </span>
+                    <span class="txt-message">
+                        River Road. Old Haunt. So Crazy..
+                    </span>
                 </div>
             </div>
         </div>
+    </div>
+</script>
 
-        <!-- 사진 피드 등록 with message-->
+<!-- 사진 피드 등록 with message-->
+<script type="text/ng-template" id="photoFeed.html" data-type="PF">
+    <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="true">
                 <div class="info-wrap">
@@ -344,8 +347,12 @@
                 </div>
             </div>
         </div>
+    </div>
+</script>
 
-        <!-- 사진 피드 등록 progress -->
+<!-- 사진 피드 등록 progress 레코딩 중에 사진을 올렸을 경우. -->
+<script type="text/ng-template" id="photoFeedProgress.html" data-type="PFP">
+    <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
                 <div class="info-wrap">
@@ -379,10 +386,10 @@
                 </div>
             </div>
         </div>
+    </div>
+</script>
 
 
-    </ion-content>
-</ion-view>
 
 
 

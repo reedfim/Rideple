@@ -3,8 +3,9 @@
  * */
 
 App.controllers
-    .controller('MeetListCtrl', ['$scope',
+    .controller('CreateGroupCtrl', ['$scope',
         function ($scope) {
+            $scope.title = "Create";
 
         }
     ]);
