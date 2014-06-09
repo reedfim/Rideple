@@ -13,7 +13,7 @@ App.controllers
             });
             menuList.push({
                 name : '모임목록',
-                href : '#app/groupList'
+                href : '#app/meetList'
             });
 //            menuList.push({
 //                name : '내기록',

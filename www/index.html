@@ -20,10 +20,11 @@
     <script src="js/common/models.js"></script>
     <script src="js/controllers/AppCtrl.js"></script>
     <script src="js/controllers/ListCtrl.js"></script>
-    <script src="js/controllers/GroupListCtrl.js"></script>
+    <script src="js/controllers/MeetListCtrl.js"></script>
     <script src="js/controllers/FriendsCtrl.js"></script>
     <script src="js/controllers/MenuCtrl.js"></script>
-    <script src="js/controllers/CreateGroupCtrl.js"></script>
+    <script src="js/controllers/CreateMeetCtrl.js"></script>
+    <script src="js/controllers/NotiListCtrl.js"></script>
     <script src="js/controllers/RideTyleSelectCtrl.js"></script>
 
     <script src="js/directives/listContentItem.js"></script>
@@ -167,7 +168,7 @@
 </script>
 
 <!-- 모임 참가 시작 -->
-<script type="text/ng-template" id="groupBegin.html" data-type="GB">
+<script type="text/ng-template" id="meetBegin.html" data-type="MB">
     <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
@@ -199,7 +200,7 @@
 </script>
 
 <!-- 모임 참가 결과(레이스) -->
-<script type="text/ng-template" id="groupFinish.html" data-type="GF">
+<script type="text/ng-template" id="meetFinish.html" data-type="MF">
     <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
@@ -230,7 +231,7 @@
 </script>
 
 <!-- 모임 생성 ui-sref="createGroup"-->
-<script type="text/ng-template" id="createGroup.html" data-type="CG">
+<script type="text/ng-template" id="createMeet.html" data-type="CM">
     <div class="List">
         <div class="list-item">
             <div class="back-panel" data-has-message="false">
@@ -247,7 +248,7 @@
                                 <p>want to share and invite your friends and</p>
                                 <p>the people around Run out together.</p>
                             </div>
-                            <button class="btn-create" ng-click="content.clickCreateGroup()">Create</button>
+                            <button class="btn-create" ng-click="content.showChoiceMeetSourcePopup()">Create</button>
                         </div>
                     </div>
                 </div>
@@ -390,6 +391,13 @@
                 </div>
             </div>
         </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="meetSourcePopup.html" data-type="MSP">
+    <div class="wrap-meet-source">
+        <div class="btn-sel select-record" ng-click="clickSelectRecord()">Select Record</div>
+        <div class="btn-sel direct-input" ng-click="clickDirectInput()">Direct Input</div>
     </div>
 </script>
 

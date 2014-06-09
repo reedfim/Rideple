@@ -19,9 +19,9 @@ App.common
             }
         }
     })
-    .factory('Model_groupList', function ($http, URLS) {  //일단 단순하게....
+    .factory('Model_meetList', function ($http, URLS) {  //일단 단순하게....
         function _fetch(callback){
-            $http.get(URLS.groupList)
+            $http.get(URLS.meetList)
                 .then(function (result) {
                     console.log(result.data);
                     callback(result.data);

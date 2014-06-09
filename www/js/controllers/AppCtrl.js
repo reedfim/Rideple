@@ -15,11 +15,18 @@ App.controllers
                 $scope.modalRideType = modal;
             });
 
-            $ionicModal.fromTemplateUrl('templates/modals/createGroup.html', {
+            $ionicModal.fromTemplateUrl('templates/modals/createMeet.html', {
                 scope: $scope,
                 animation: 'slide-in-up'
             }).then(function(modal) {
-                $scope.modalCreateGroup = modal;
+                $scope.modalCreateMeet = modal;
+            });
+
+            $ionicModal.fromTemplateUrl('templates/modals/notiList.html', {
+                scope: $scope,
+                animation: 'slide-in-up'
+            }).then(function(modal) {
+                $scope.modalNotiList = modal;
             });
 
             $scope.clickHeader = function(){

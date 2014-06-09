@@ -1,8 +1,8 @@
 {
-    "groups": [
+    "meets": [
         {
             "idx": "5",
-            "contentType": "GB",
+            "contentType": "MB",
             "distance": "45",
             "expectedTime": "05:45:32",
             "placeName": "Central Park Riding",
@@ -12,7 +12,7 @@
         },
         {
             "idx": "5",
-            "contentType": "GB",
+            "contentType": "MB",
             "distance": "80",
             "expectedTime": "07:430:00",
             "placeName": "남한강 종주",
@@ -22,7 +22,7 @@
         },
         {
             "idx": "5",
-            "contentType": "GB",
+            "contentType": "MB",
             "distance": "100",
             "expectedTime": "08:00:00",
             "placeName": "북한강 코스 종주",
@@ -32,7 +32,7 @@
         },
         {
             "idx": "5",
-            "contentType": "GB",
+            "contentType": "MB",
             "distance": "20",
             "expectedTime": "04:00:00",
             "placeName": "아라뱃길 라이딩",
@@ -42,7 +42,7 @@
         },
         {
             "idx": "5",
-            "contentType": "GB",
+            "contentType": "MB",
             "distance": "12",
             "expectedTime": "02:45:32",
             "placeName": "탄천 라이딩",
@@ -52,7 +52,7 @@
         },
         {
             "idx": "5",
-            "contentType": "GB",
+            "contentType": "MB",
             "distance": "60",
             "expectedTime": "06:45:32",
             "placeName": "한강 종주",
@@ -62,7 +62,7 @@
         },
         {
             "idx": "5",
-            "contentType": "GB",
+            "contentType": "MB",
             "distance": "50",
             "expectedTime": "05:45:32",
             "placeName": "중랑천 코스",

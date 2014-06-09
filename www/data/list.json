@@ -3,11 +3,11 @@
     "plans" : [
         {
             "idx" : "1",
-            "contentType" : "CG"
+            "contentType" : "CM"
         },
         {
             "idx" : "5",
-            "contentType" : "GB",
+            "contentType" : "MB",
             "distance" : "45",
             "expectedTime" : "02:45:32",
             "placeName" : "Central Park Riding",
@@ -83,7 +83,7 @@
     "feeds" : [
         {
             "idx" : "6",
-            "contentType" : "GF",
+            "contentType" : "MF",
             "routeMapImg" : "images/mapline.png",
             "placeName" : "Central Park Riding",
             "rideType" : "cycle",

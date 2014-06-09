@@ -28,7 +28,7 @@ App.common
     }])
     .constant('URLS', {
         list : 'data/list.json',
-        groupList : 'data/groupList.json'
+        meetList : 'data/meetList.json'
     })
     .constant('FLAG', {
 
@@ -38,12 +38,15 @@ App.common
             'BR1' : 'battleResult1.html',
             'BR2' : 'battleResult2.html',
             'BB' : 'battleBegin.html',
-            'GB' : 'groupBegin.html',
-            'GF' : 'groupFinish.html',
-            'CG' : 'createGroup.html',
+            'MB' : 'meetBegin.html',
+            'MF' : 'meetFinish.html',
+            'CM' : 'createMeet.html',
             'DF' : 'defaultFeed.html',
             'PF' : 'photoFeed.html',
             'PFP' : 'photoFeedProgress.html'
+        },
+        POPUP : {
+            'MSP' : 'meetSourcePopup.html'
         }
     })
 

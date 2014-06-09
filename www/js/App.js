@@ -20,6 +20,7 @@ App
         });
 
         global.makeTemplateCache($templateCache, TMPL_MAP.LIST); //리스트에서 사용할 템플릿들을 캐싱한다.
+        global.makeTemplateCache($templateCache, TMPL_MAP.POPUP); //팝업에서 사용할 템플릿들을 캐싱한다.
     })
 
     .config(function ($stateProvider, $urlRouterProvider) {
@@ -41,11 +42,11 @@ App
                 }
             })
             .state('app.meetList', {
-                url: '/groupList',
+                url: '/meetList',
                 views: {
                     'contents': {
-                        templateUrl: 'templates/pageviews/groupList.html',
-                        controller : 'GroupListCtrl'
+                        templateUrl: 'templates/pageviews/meetList.html',
+                        controller : 'MeetListCtrl'
                     }
                 }
             })
@@ -55,6 +56,14 @@ App
                     'contents': {
                         templateUrl: 'templates/pageviews/friends.html',
                         controller : 'FriendsCtrl'
+                    }
+                }
+            })
+            .state('app.test', {
+                url : '/test',
+                views : {
+                    'contents' : {
+                        templateUrl : 'templates/test/meetSourcePopup.html'
                     }
                 }
             })
