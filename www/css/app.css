@@ -228,3 +228,30 @@ button.btn-rideple {color:#1c8f96 !important}
 .wrap-meet-source .btn-sel {width:230px;height:40px;border-radius:4px;font-size:15px;font-weight:bold;color:#fff;line-height:40px;text-align:center}
 .wrap-meet-source .btn-sel.select-record {background-color:#28b1ad;}
 .wrap-meet-source .btn-sel.direct-input {background-color:#5fa91f;margin-top:5px}
+
+
+/* splash image */
+#splashWrapper {width:100%;height:100%;position:absolute;top:0;left:0;background:url(../images/splash.png) no-repeat;background-size:320px;background-color:#00BCA8;z-index:1;
+    opacity:0;visibility:hidden;
+    -webkit-animation-duration:1.5s;
+    -webkit-animation-name:bluring;
+    -webkit-animation-iteration-count:1}
+
+@-webkit-keyframes bluring {
+    0% {
+        visibility:visible;
+        opacity:1;
+    }
+
+    75% {
+        opacity:1;
+    }
+
+    100% {
+        opacity:0;
+    }
+}
+
+/* pull down refresh 글자 크기 */
+.text-refreshing {font-size:12px !important;}
+.text-pulling {font-size:12px !important;}

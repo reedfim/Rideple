@@ -6,7 +6,7 @@ App.common = angular.module('App.common', []);
 
 
 App
-    .run(function ($ionicPlatform, $templateCache, TMPL_MAP, global) {
+    .run(function ($ionicPlatform, $templateCache, TMPL_MAP, global, $timeout) {
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
@@ -21,6 +21,11 @@ App
 
         global.makeTemplateCache($templateCache, TMPL_MAP.LIST); //리스트에서 사용할 템플릿들을 캐싱한다.
         global.makeTemplateCache($templateCache, TMPL_MAP.POPUP); //팝업에서 사용할 템플릿들을 캐싱한다.
+
+        $timeout(function(){
+            document.getElementById('splashWrapper').style.display = 'none';
+        }, 3000);
+
     })
 
     .config(function ($stateProvider, $urlRouterProvider) {
