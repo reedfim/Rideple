@@ -17,6 +17,7 @@ address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 
 /* 공통 */
 .img-comm {background:url(../images/img_g_01.png) no-repeat;background-size:141px 189px}
+.img-comm2 {background:url(../images/img_02.png) no-repeat;background-size:105px 90px}
 
 /* Header */
 .Header {height:50px}
@@ -39,6 +40,15 @@ button.btn-rideple {color:#1c8f96 !important}
 .Menu-Indicator .menu-list.menu-open {display:block}
 
 
+
+.type-ride {width:20px;height:19px;}
+.type-ride[data-type=cycle] {background-position:0 -35px;}
+.type-ride[data-type=mtb] {background-position:0 -35px;} /*Mountain Bike*/
+.type-ride[data-type=tb] {background-position:0 -35px;} /*Touring Bike*/
+.type-ride[data-type=walk] {background-position:-60px -35px;}
+.type-ride[data-type=run] {background-position:-40px -35px;}
+.type-ride[data-type=hike] {background-position:-20px -35px;}
+
 /* 메인 리스트 아이템 */
 .List .list-item {width:100%;overflow:hidden;}
 .List .list-item .back-panel {width:100%;padding:10px 10px 10px 10px;}
@@ -49,13 +59,6 @@ button.btn-rideple {color:#1c8f96 !important}
 
 .List .user-profile-photo {display:inline-block;width:42px;height:42px;border-radius:42px;border:2px solid rgba(255,255,255,1);box-shadow:1px 1px 2px rgba(0,0,0,.5)} /* 유저 프로필 사진 */
 
-.List .list-item .type-ride {width:20px;height:19px;}
-.List .list-item .type-ride[data-type=cycle] {background-position:0 -35px;}
-.List .list-item .type-ride[data-type=mtb] {background-position:0 -35px;} /*Mountain Bike*/
-.List .list-item .type-ride[data-type=tb] {background-position:0 -35px;} /*Touring Bike*/
-.List .list-item .type-ride[data-type=walk] {background-position:-60px -35px;}
-.List .list-item .type-ride[data-type=run] {background-position:-40px -35px;}
-.List .list-item .type-ride[data-type=hike] {background-position:-20px -35px;}
 
 .List .list-item .info-bar {position:absolute;left:0;bottom:0;z-index:20;width:100%;height:26px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;background:#000;opacity:.4}
 .List .list-item .info-bar-item {position:absolute;left:0;bottom:0;width:100%;height:26px;z-index:21;}
@@ -224,10 +227,49 @@ button.btn-rideple {color:#1c8f96 !important}
 .slider-pager {bottom:5px}
 
 /* 모임 생성 - 소스 선택 팝업 */
-
 .wrap-meet-source .btn-sel {width:230px;height:40px;border-radius:4px;font-size:15px;font-weight:bold;color:#fff;line-height:40px;text-align:center}
 .wrap-meet-source .btn-sel.select-record {background-color:#28b1ad;}
 .wrap-meet-source .btn-sel.direct-input {background-color:#5fa91f;margin-top:5px}
+
+/* 모임 생성 */
+.Create-Meet {width:100%}
+.Create-Meet .hide {width:0;height:0;text-indent:-9999px;opacity:0;}
+.Create-Meet .back-img {background:url(../images/cmMeetBackground.png) no-repeat;width:100%;height:175px;position:absolute;top:0;left:0;z-index:1}
+.Create-Meet .back-dimmed {background-color:#000;opacity:.7;width:100%;height:175px;position:absolute;top:0;left:0;z-index:2}
+.Create-Meet .top-wrap {z-index:3;position:absolute;top:0;left:0;width:100%}
+.Create-Meet .section {overflow:hidden}
+.Create-Meet .sec-height {height:43px}
+.Create-Meet .sec-width1 {width:100%}
+.Create-Meet .sec-width2 {width:49%}
+.Create-Meet .section-departure {border-bottom:1px solid #777}
+.Create-Meet .section-via {border-bottom:1px solid #777}
+.Create-Meet .section-finish {border-bottom:1px solid #777}
+.Create-Meet .m-section-distance {display:inline-block;border-right:1px solid #777}
+.Create-Meet .m-section-time {display:inline-block}
+.Create-Meet .section-title {border-bottom:1px solid #ddd}
+.Create-Meet .m-section-type {display:inline-block;border-right:1px solid #ddd;border-bottom:1px solid #ddd}
+.Create-Meet .m-section-private {width:50%;display:inline-block;border-bottom:1px solid #ddd;margin-left:-4px}
+.Create-Meet .m-section-datetime {display:inline-block;border-right:1px solid #ddd;border-bottom:1px solid #ddd;margin-top:-4px}
+.Create-Meet .m-section-persons {width:50%;display:inline-block;border-bottom:1px solid #ddd;margin-left:-4px;margin-top:-4px}
+
+.Create-Meet .lab-comm {font-size:13px;float:left;font-size:13px;display:inline-block;line-height:43px;padding-left:5px;}
+.Create-Meet .lab-departure {color:#58e9e3}
+.Create-Meet .lab-via {color:#ff9681}
+.Create-Meet .lab-finish {color:#fff;}
+.Create-Meet .lab-distance {float:none;line-height:21px;color:#fff}
+.Create-Meet .lab-time {float:none;line-height:21px;color:#fff}
+.Create-Meet .inp-comm {font-size:13px;font-weight:bold;width:80%;border:0 none;background:none;float:left;display:inline-block}
+.Create-Meet .inp-departure {color:#fff;padding-left:5px;padding-top:4px;}
+.Create-Meet .inp-via {color:#fff;padding-left:5px;padding-top:4px;}
+.Create-Meet .inp-finish {color:#fff;padding-left:5px;padding-top:4px;}
+.Create-Meet .inp-title {padding-left:5px;}
+.Create-Meet .bottom-arrow {float:right;width:14px;height:8px;margin-right:10px;margin-top:17px;background-position:-46px -56px;}
+
+
+
+
+
+
 
 
 /* splash image */

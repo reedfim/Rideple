@@ -63,30 +63,5 @@ App.controllers
                 $scope.modalNotiList.show();
             }
 
-//            var popupConfig = {
-//                template: '', //templateCache사용
-//                title: 'Test',
-//                subTitle: 'subTitle',
-//                scope: $scope,
-//                buttons: [
-//                    { text: 'Cancel' },
-//                    {
-//                        text: '<b>Save</b>',
-//                        type: 'button-positive',
-//                        onTap: function(e) {
-//                            console.log('click')
-//                        }
-//                    }
-//                ]
-//            };
-//            var testPopup = null
-////            testPopup.then(function(res) {
-////                console.log('Tapped!', res);
-////            });
-//
-//            $scope.showPopup = function(){
-//                testPopup = $ionicPopup.show(popupConfig);
-//            }
-
         }
     ]);

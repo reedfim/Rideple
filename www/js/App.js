@@ -68,7 +68,7 @@ App
                 url : '/test',
                 views : {
                     'contents' : {
-                        templateUrl : 'templates/test/meetSourcePopup.html'
+                        templateUrl : 'templates/modals/createMeet.html'
                     }
                 }
             })

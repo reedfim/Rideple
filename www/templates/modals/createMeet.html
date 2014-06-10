@@ -4,6 +4,67 @@
         <h1 class="title">{{title}}</h1>
         <button class="button button-clear button-primary btn-rideple" ng-click="complete()">Complete</button>
     </ion-header-bar>
-    <ion-content>
+    <ion-content class="has-header Create-Meet">
+        <div class="back-img"></div>
+        <div class="back-dimmed"></div>
+        <div class="top-wrap">
+            <div class="section sec-height sec-width1 section-departure">
+                <label for="inpDeparture" class="lab-comm lab-departure">Departure*</label>
+                <input type="text" class="inp-comm inp-departure" id="inpDeparture"/>
+            </div>
+            <div class="section sec-height sec-width1 section-via">
+                <label for="inpVia" class="lab-comm lab-via">via</label>
+                <input type="text" class="inp-comm inp-via" id="inpVia"/>
+            </div>
+            <div class="section sec-height sec-width1 section-finish">
+                <label for="inpFinish" class="lab-comm lab-finish">finish</label>
+                <input type="text" class="inp-comm inp-finish" id="inpFinish"/>
+            </div>
+            <div class="section-info">
+                <div class="sec-height sec-width2 m-section-distance">
+                    <label for="selDistance" class="lab-comm lab-distance">
+                        <div class="lab-title">Distance</div>
+                        <div class="lab-distance">0km</div>
+                    </label>
+                    <div class="img-comm2 bottom-arrow"></div>
+                    <select name="selDist" id="selDistance" class="hide">
+                        <option value="{{dist}}" ng-repeat="dist in distanceList">{{dist}}km</option> <!--ng-repeat-->
+                    </select>
+                </div>
+                <div class="sec-height sec-width2 m-section-time">
+                    <label for="selTime" class="lab-comm lab-time">
+                        <div class="lab-title">Time</div>
+                        <div class="lab-time">00:00:00</div>
+                    </label>
+                    <div class="img-comm2 bottom-arrow"></div>
+                    <select name="selTm" id="selTime" class="hide">
+                        <option value="10">10km</option> <!--ng-repeat-->
+                    </select>
+                </div>
+            </div>
+            <div class="sec-height sec-width1 section-title">
+                <label for="inpTitle" class="lab-title"></label>
+                <input type="text" class="inp-title" id="inpTitle" placeholder="Title"/>
+            </div>
+            <div class="section-setting sec-width1">
+                <div class="sec-height sec-width2 m-section-type" ng-click="changeType()">
+                    <div class="subject lab-comm">{{rideType}}</div>
+                    <div class="img-comm2 bottom-arrow"></div>
+                </div>
+                <div class="sec-height sec-width2 m-section-private" ng-click="changePrivate()">
+                    <div class="subject lab-comm">{{private}}</div>
+                    <div class="img-comm2 bottom-arrow"></div>
+                </div>
+                <div class="sec-height sec-width2 m-section-datetime">
+                    <div class="subject lab-comm">date/time</div>
+                    <div class="img-comm2 bottom-arrow"></div>
+                </div>
+                <div class="sec-height sec-width2 m-section-persons">
+                    <div class="subject lab-comm">Persons</div>
+                    <div class="img-comm2 bottom-arrow"></div>
+                </div>
+            </div>
+            <div class="section-message sec-height sec-width"></div>
+        </div>
     </ion-content>
 </div>
