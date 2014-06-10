@@ -26,6 +26,13 @@ App
             document.getElementById('splashWrapper').style.display = 'none';
         }, 3000);
 
+
+        $.getJSON( "https://www.strava.com/api/v3/athlete/activities?access_token=b4d832b3c9deb2bdec0cb0d317f159ef19997e17&callback=?", function (results) {
+            console.log(results);
+        });
+        $.getJSON( "https://www.strava.com/api/v3/activities/86593098?access_token=b4d832b3c9deb2bdec0cb0d317f159ef19997e17&callback=?", function (results) {
+            console.log(results);
+        });
     })
 
     .config(function ($stateProvider, $urlRouterProvider) {
